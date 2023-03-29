@@ -45,11 +45,11 @@ pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
 
 #%% ### Load in linear mixed effects model data ###
-df = pd.read_csv(r'\\userapps\data\SHAREDIR\Afstudeeronderzoek Intubatie voorspelling\Raw data files\megadata.csv', delimiter=';')
+df = pd.read_csv(, delimiter=';')
 print(df.head(2))
 
 ### Load in other features from the aggregated data set ###
-df1 = pd.read_excel(r'\\userapps\data\SHAREDIR\Afstudeeronderzoek Intubatie voorspelling\Aggregated data files\modified aggregated data set.xlsx')
+df1 = pd.read_excel(')
 print(df1.info())
 df1 = df1.rename(columns={'patientnr':'Patientnr'})
 
