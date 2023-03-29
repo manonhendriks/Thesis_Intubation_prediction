@@ -45,7 +45,7 @@ pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
 
 #%% Load in data
-df = pd.read_excel(r'\\userapps\data\SHAREDIR\Afstudeeronderzoek Intubatie voorspelling\Aggregated data files\Geaggregeerde data _ 20230216_v4.xlsx')
+df = pd.read_excel()
 df.drop_duplicates(subset=['patientnr'], keep='first', inplace=True)
 #print(sum(df.duplicated(subset=['patientnr']))) (test if there are double IDs)
 
@@ -450,11 +450,11 @@ plt.legend()
 plt.show()
 #%% Load in validation data
 ### Load in data ###
-df_cath = pd.read_excel(r'\\userapps\data\SHAREDIR\Afstudeeronderzoek Intubatie voorspelling\Aggregated data files\Geagreggeerde data catherina _ 20230316_v4.xlsx')
-df_cwz = pd.read_excel(r'\\userapps\data\SHAREDIR\Afstudeeronderzoek Intubatie voorspelling\Aggregated data files\Geagreggeerde data cwz _ 20230316_v4.xlsx')
-df_martini = pd.read_excel(r'\\userapps\data\SHAREDIR\Afstudeeronderzoek Intubatie voorspelling\Aggregated data files\Geagreggeerde data martini _ 20230316_v4.xlsx')
+df = pd.read_excel()
+df = pd.read_excel()
+df = pd.read_excel()
 
-df_val = pd.concat([df_cath, df_cwz, df_martini], ignore_index=True)
+df_val = pd.concat([#above dfs], ignore_index=True)
 
 DubbeleIDS = df_val[df_val.duplicated('patientnr')]
 print(DubbeleIDS)
